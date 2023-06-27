@@ -51,6 +51,12 @@ If you prefer to run this lab from you preferred IDE, ensure that AWS CLI and CD
     cd 11-api-gateway-managed-endpoint
     ```
 
+    If you're in root
+    ```
+    cd sagemaker-jumpstart-generative-ai-examples/11-api-gateway-managed-endpoint
+    ```
+
+
 6. Create a python virtualenv
 
     ```
