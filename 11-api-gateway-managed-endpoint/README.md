@@ -39,29 +39,29 @@ If you prefer to run this lab from you preferred IDE, ensure that AWS CLI and CD
    - Instance type: t3.small
 
 3. Open the Cloud9 IDE
-4. Clone the repository
+4. In the terminal, run the following cmd to clone the repository
 
     ```
-    $ git clone https://github.com/sunbc0120/sagemaker-jumpstart-generative-ai-examples.git
+    git clone https://github.com/sunbc0120/sagemaker-jumpstart-generative-ai-examples.git
     ```
 
-5. In the terminal, navigate to lab 11
+5. In the terminal, navigate to lab 11 folder
 
     ```
-    $ cd 11-api-gateway-managed-endpoint
+    cd 11-api-gateway-managed-endpoint
     ```
 
 6. Create a python virtualenv
 
     ```
-    $ python3 -m venv .venv
+    python3 -m venv .venv
     ```
 
 7. Activate your virtual environment
 
     For Mac/Linux platform:
     ```
-    $ source .venv/bin/activate
+    source .venv/bin/activate
     ```
 
     If you are a Windows platform, you would activate the virtualenv like this:
@@ -72,7 +72,7 @@ If you prefer to run this lab from you preferred IDE, ensure that AWS CLI and CD
 8. Install required dependencies
 
     ```
-    $ pip install -r requirements.txt
+    pip install -r requirements.txt
     ```
 
 9. Bootstrap your environment (if required)
@@ -80,7 +80,7 @@ If you prefer to run this lab from you preferred IDE, ensure that AWS CLI and CD
     If you have not previously used CDK, bootstrap your environment
 
     ```
-    $ cdk bootstrap
+    cdk bootstrap
     ```
 
 10. Define your configuration
@@ -115,14 +115,14 @@ If you prefer to run this lab from you preferred IDE, ensure that AWS CLI and CD
  1. In the previous step, we defined the model we want to use. Now we will register the model and create the endpoint configurations in Amazon SageMaker. By default, the stack assumes that we will be utilising the endpoint manager to provision our real-time endpoint. This is done by setting `deploy_enable=False`.
 
      ```
-     $ cdk deploy ModelMeteredStack
+     cdk deploy ModelMeteredStack
      ```
 
  2. Deploy the endpoint manager stack
 
      Deploy the lambda that will be responsible for the automatic creation and deletion of your Amazon SageMaker endpoint
      ```
-     $ cdk deploy EndpointManagerStack
+     cdk deploy EndpointManagerStack
      ```
      
  3. Deploy serverless API
@@ -130,7 +130,7 @@ If you prefer to run this lab from you preferred IDE, ensure that AWS CLI and CD
      Next we will deploy the passthrough lambda which will invoke the Amazon SageMaker endpoint and the API Gateway which will provide us with an internet facing API to interact with our Amazon SageMaker Endpoint and manage our Amazon SageMaker endpoint. The API Gateway is backed by a basic lambda authorizer with the authorization tokens stored in an Amazon DynamoDB database.
 
      ```
-     $ cdk deploy ModelLambdaStack && cdk deploy APIStack
+     cdk deploy ModelLambdaStack && cdk deploy APIStack
      ```
 
  4.  Setup your auth
