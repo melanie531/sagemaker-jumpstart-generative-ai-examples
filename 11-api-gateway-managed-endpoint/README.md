@@ -1,11 +1,11 @@
 
 # Lab 11: Deploying a auto start/stop Amazon SageMaker Foundation Model endpoint backed by a API Gateway/Lambda
 
-This demo code provides you with a template to develop an integration with an Amazon SageMaker foundation model fronted by a serverless API with a simple dynamodb authorizer using CDK.
+This demo code will walk you through on how to deploy an Amazon SageMaker foundation model fronted by a serverless API with a basic dynamodb authorizer using CDK.
 
-The real-time endpoint also features a automatic start/stop functionality by setting an expiry datetime for the endpoint. Similar to a parking meter whereby you top up credits to ensure that your parking does not expire, in this case, you keep renewing the endpoint expiry date time to keep it running.
+In this demo we will also deploy a mechanism to manage our real-time endpoint which features an automatic start/stop functionality by setting an expiry datetime for the endpoint. Similar to a parking meter whereby you top up credits to ensure that your parking does not expire, in this case, you keep renewing the endpoint expiry date time to keep it running.
 
-This solution was implemented to solve a recurring problem with users leaving their Amazon SageMaker endpoint on and forgetting to turn it off. One way of solving it is to implement a schedule, however having to constantly set a pre-defined datetime can be cumbersome as schedules can change. Instead by intentionally forcing the user to top up tokens can raise the awareness of the cost of the endpoint (particularly for LLM endpoint) and also ensure that the user is intentional in how much more time they need to use the endpoint for testing.
+This solution was designed to solve a recurring problem with users leaving their Amazon SageMaker endpoint on and forgetting to delete them after usage. The approach taken solve this in the first iteration is to enforce users to renew their endpoint expiry times based on when they need it. By doing so, it raises the awareness of the cost of the endpoint (particularly for LLM endpoint) and also ensure that the user is intentional in how much more time they need to use the endpoint for testing.
 
 ## Table of contents
 - [Lab 11: Deploying a auto start/stop Amazon SageMaker Foundation Model endpoint backed by a API Gateway/Lambda](#lab-11-deploying-a-auto-startstop-amazon-sagemaker-foundation-model-endpoint-backed-by-a-api-gatewaylambda)
