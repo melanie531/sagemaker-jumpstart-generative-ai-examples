@@ -18,6 +18,7 @@ This solution was implemented to solve a recurring problem with users leaving th
   - [Real-time Endpoint Management Functions - Adding a new real-time endpoint](#real-time-endpoint-management-functions---adding-a-new-real-time-endpoint)
   - [Interacting with your real-time endpoint via API](#interacting-with-your-real-time-endpoint-via-api)
   - [Deploying an async endpoint (WIP)](#deploying-an-async-endpoint-wip)
+  - [Lab Notebook](#lab-notebook)
   - [How does the endpoint manager work?](#how-does-the-endpoint-manager-work)
   - [To Do](#to-do)
   - [References](#references)
@@ -327,6 +328,14 @@ If you'd like to deploy an asynchronous foundational model endpoint, follow this
 ```
 cdk deploy ModelAsyncStack
 ```
+---
+
+## Lab Notebook
+
+You can also interact with the API gateway via notebook. To do so, clone this repository or copy `00-api_gateway_managed_endpoint.ipynb` to your notebook environment (i.e. Amazon SageMaker Studio) and run through the instructions in the notebook.
+
+The notebook will show you how to manage your endpoint, interact with your SageMaker endpoint API And how to use Langchain with APIGateway.
+
 ---
 ## How does the endpoint manager work?
 
